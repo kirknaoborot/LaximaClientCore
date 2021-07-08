@@ -9,23 +9,13 @@ namespace LaximaClientCore.Client
 {
     public class SoapClient : ISoapClient
     {
-        private readonly IConfiguration _configuration;
+        public string DefaultLocation { get; set; } = "http://ws.laximo.net/ec.Kito.WebCatalog/services/Catalog.CatalogHttpSoap11Endpoint/";
 
-        public string DefaultLocation { get; set; }
-
-        public string DefaultUri { get; set; }
+        public string DefaultUri { get; set; } = "http://WebCatalog.Kito.ec";
 
 
         private readonly ICredential _credential;
 
-        public SoapClient(IConfiguration configuration)
-        {
-            _configuration = configuration;
-
-            DefaultLocation = _configuration.GetValue<string>("DefaultLocation");
-
-            DefaultUri = _configuration.GetValue<string>("DefaultUri");
-        }
 
         public SoapClient(ICredential credential)
         {
