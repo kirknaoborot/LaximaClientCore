@@ -30,8 +30,8 @@ namespace LaximaClientCore.Controllers
 
             //var credentials = new BasicCredential
             //{
-            //    Login = "webmaster@auto-iksora.ru",
-            //    Password = "D82p3bHmDwnY8qym"
+            //    Login = "",
+            //    Password = ""
             //};
             //var client = new SoapClient(credentials);
             //string query = "FindOEM:Locale=ru_RU|Brand=RVI|OEM=5001837172|Options=crosses|ReplacementTypes=Replacement,Duplicate,Synonym,Bidirectional";
