@@ -23,9 +23,9 @@ namespace LaximaClientCore.Controllers
             serviceWsClient.OpenAsync();
             ServiceReference1.ServiceWsChannel serviceWs;
             var current_query = "FindOEM:Locale=ru_RU|Brand={}|OEM={}|Options=crosses|ReplacementTypes=Replacement,Duplicate,Synonym,Bidirectional";
-            var key = Convert.ToBase64String(MD5.Create().ComputeHash(Encoding.UTF8.GetBytes($"{current_query}D82p3bHmDwnY8qyM")));
+            var key = Convert.ToBase64String(MD5.Create().ComputeHash(Encoding.UTF8.GetBytes($"{current_query}")));
             serviceWsClient.ChannelFactory.CreateChannel();
-            var result = serviceWsClient.QueryDataLoginAsync(current_query, "webmaster@auto-iksora.ru",key).Result;
+            var result = serviceWsClient.QueryDataLoginAsync(current_query, "",key).Result;
             serviceWsClient.CloseAsync();
 
             //var credentials = new BasicCredential
